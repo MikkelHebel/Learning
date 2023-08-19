@@ -1,7 +1,11 @@
+# The method works by examining each set of adjacent elements in the string, from left to right,switching their positions
+# if they are out of order. The algorithm then repeats this process until it can run through the entire string and find
+# no two elements that need to be swapped.
+
 # Big O Notation of Bubble Sort:
 # O(n^2)
 
-array = [1, 5, 2, 6, 3, 7, 10, 8, 9, 4]
+array = [1, 8, 15, 14, 2, 3, 7, 10, 9, 4, 6, 5, 11, 12, 13]
 
 def bubble(list):
     sorted = False
