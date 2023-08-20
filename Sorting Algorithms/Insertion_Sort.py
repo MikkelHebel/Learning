@@ -17,5 +17,4 @@ def insertion(list):
 
     return list
 
-
 print(insertion(array))

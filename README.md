@@ -17,7 +17,7 @@ The picture above shows how good / bad different O Notations are and how the pro
 A function that grows alot when the number of inputs grows is bad, but if the function grows less that is good.
 2 algorithms can have the same Big O but perform wildly different.
 
-**Example of some Big O Notation from Best to worst:**
+**Example of some Big O Notation from best to worst:**
 
 **O(1)**
 > Is the lowest O Notation and it basically means that no matter how many inputs you give it the run time will be constant.
