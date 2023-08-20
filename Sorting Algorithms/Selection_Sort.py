@@ -4,3 +4,22 @@
 
 # Big O Notation of Selection Sort:
 # O(n^2)
+
+array = [1, 8, 15, 14, 2, 3, 7, 10, 9, 4, 6, 5, 11, 12, 13]
+
+def selection(list):
+    indexing_length = range(0, len(list) - 1)
+
+    for i in indexing_length:
+        min_value = i
+
+        for next in range(i+1, len(list)):
+            if list[next] < list[min_value]:
+                min_value = next
+        
+        if min_value != i:
+            list[min_value], list[i] = list[i], list[min_value]
+    
+    return list
+
+print(selection(array))
