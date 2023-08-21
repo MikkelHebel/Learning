@@ -5,23 +5,29 @@
 # Big O Notation of Bogo Sort:
 # O((n+1)!)
 import random
+import time
 
 array = [1, 8, 15, 14, 2, 3, 7, 10, 9, 4, 6, 5, 11, 12, 13]
 array2 = [3, 1, 2, 4]
 array3 = [1, 8, 15, 14, 2, 3, 7, 10, 9, 4]
 
 def bogo(list):
+    start = time.time()
     sorted = False
     random.shuffle(list)
 
     while sorted == False:
         sorted = True
+
+        # Check if the array is solved otherwise shuffle and try again.
         for i in range(0, len(list) - 1):
             if list[i] > list[i+1]:
                 sorted = False
                 random.shuffle(list)
 
-
+    end = time.time()
+    print("Time elapsed:")
+    print(end - start)
     return list
 
-print(bogo(array3))
+print(bogo(array))
