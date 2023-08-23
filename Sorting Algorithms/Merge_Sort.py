@@ -3,7 +3,7 @@
 # This process of dividing and merging continues until the entire array is sorted.
 
 # Big O Notation of Merge Sort:
-# O(n * log(n))
+# O(n log n)
 
 array = [1, 8, 15, 14, 2, 3, 7, 10, 9, 4, 6, 5, 11, 12, 13]
 
