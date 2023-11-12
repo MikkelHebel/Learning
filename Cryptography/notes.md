@@ -1,0 +1,8 @@
+# Timing attack
+A timing attack is a type of side-channel attack where an attacker tries to infer sensitive information based on how long it takes a system to respond to different inputs. In the context of hashing and salting, a timing attack could exploit the variations in computation time for different inputs to deduce information about the hashed passwords.
+
+When hashing passwords, if the hashing algorithm takes longer for incorrect passwords due to, say, early termination when a wrong character is detected, an attacker could potentially deduce the validity of different password guesses based on the time taken to hash. This can reveal information about the correctness of parts of the password.
+
+Salting mitigates this by introducing a random, unique value (the salt) for each hashed password. Without the salt, even if the attacker knows one user's password, they can't easily discern this from the hashed values of other users because the salts differ. However, in the presence of a timing vulnerability, an attacker might still be able to discern some information, but the use of salts significantly complicates the process by ensuring that the attacker can't easily compare timing differences across different hashes.
+
+In essence, while hashing protects against straightforward decryption, the inclusion of salts further strengthens the security by making it harder for attackers to leverage timing variations in the hashing process to deduce information about the passwords.
